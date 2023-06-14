@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    overflow-x: hidden ;
+    min-height: 100vh;
+}
+
+header{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header .logo{
+    color: white;
+    font-size: 2em;
+    user-select: none;
+}
+
+header .navigation a{
+    position: relative;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 6px  15px ;
+}
+
+header .navigation a:hover{
+    color: black;
+}
+
+header .navigation a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: 0.3s;
+    transform: scale(0);
+    border-radius: 20px;
+}
+
+header .navigation a:hover span{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background-image: url(images/background.png);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.parallax #text{
+    position: absolute;
+    text-shadow: 2px 4px 5px black,4px 6px 7px whitesmoke;
+    font-size: 5em;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.parallax img#gate-left{
+    
+    transform: translateX(-400px);
+}
+.parallax img#gate-right{
+    transform: translateX(400px);
+}
+
+.sec{
+    padding: 30px 90px;
+    position: relative;
+    background: black;
+}
+.sec h2{
+    font-size: 3em;
+    color: white;
+}
+
+.sec p{
+    font-size: 1em;
+    color: white;
+    width: 100%;
+    font-weight: 600;
+    text-align: justify;
+}
